@@ -1,10 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'website/base.html' %}
 
-</body>
-</html>
+{% block containerRight %}
+
+<div class="presArticle col-md-12" >
+    <h3>plus sur coup d’un soir</h3>
+    <p>L’association coup d’un soir a pour objectif de vous faire vivre des expériences culinaires
+        uniques, déroutantes et indépendantes les unes des autres.
+        Le temps d’une soirée, l’univers gastronomique d’un ou de plusieurs chefs est partagé dans
+        un lieu authentique de la région lausannoise. Des coups d’un soir, sur réservation et au
+        nombre de places limité. L’équipe s’engage à proposer une cuisine audacieuse et
+        contemporaine au travers de chaque événement permettant au suivant d’exister.
+        <br><br>Après le succès d’un
+        <a href='{% url "project_summary" %}'>premier événement</a>
+        organisé spontanément par deux membres de notre comité, c’est avec chaleur que
+        l’association coup d’un soir a vu le jour, composée aujourd’hui de 5 épicuriennes.
+        <br><br>L’équipe jeune et motivée de coup d’un soir se compose d’un panel varié de
+        parcours portés par le même intérêt pour la gastronomie et le goût du risque.
+        Ses membres s'engagent à proposer une cuisine audacieuse et contemporaine au travers
+        d'événements permettant aux suivants d'exister.</p>
+</div>
+    <div class="row">
+        <div class="col-md-6" id="articleLeft">
+        <div class="art col-md-12" >
+            {% for mem in member_left %}
+                {% include 'website/member_summary.html' %}
+           {% endfor %}
+        </div>
+        </div>
+        <div class="col-md-6" id="articleRight">
+        <div class="art col-md-12" >
+        {% for mem in member_right %}
+                {% include 'website/member_summary.html' %}
+           {% endfor %}
+        </div>
+        </div>
+    </div>
+
+    <script>
+    document.getElementById("containerLeft").style.background = '{{ background_url }}';
+    document.getElementById("containerLeft").style.backgroundRepeat = "no-repeat";
+    document.getElementById("containerLeft").style.backgroundSize = "cover";
+    document.getElementById("containerLeft").style.backgroundPosition = "center center";
+    </script>
+{% endblock %}

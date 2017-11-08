@@ -1,10 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'website/base.html' %}
 
-</body>
-</html>
+{% block containerRight %}
+
+    <div class="presArticle col-md-12" >
+    <h3>foire aux questions</h3>
+</div>
+    <div class="row">
+
+        <div style="margin-top:2vh;">
+                        <div class="col-md-6" >
+                      <div class=" col-md-12" >
+                            <div class="panel panel-default">
+
+                                    <div class="panel-heading"  data-toggle="collapse" data-target="#qu1" onClick="test('qu1');">
+                                    <h3 class="panel-title"><span id="plus1">+</span>&nbsp;&nbsp;&nbsp; Comment peut-on participer à un événement ? </h3>
+                                    </div>
+
+                                <div class="panel-body collapse" id="qu1">
+                                    Il suffit de s’inscrire en ligne sur notre site internet dans la rubrique <a href="reservation.html">prochain événement/réservation</a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                             <div class=" col-md-12" >
+                             <div class="panel panel-default">
+
+                                    <div class="panel-heading" data-toggle="collapse" data-target="#qu2" onClick="test('qu2');">
+                                    <h3 class="panel-title"><span id="plus2">+</span>&nbsp;&nbsp;&nbsp; Comment peut-on être tenu au courant des prochains événements ?</h3>
+                                    </div>
+
+                                <div class="panel-body collapse" id="qu2">
+                                    Sur notre site internet ou en s’inscrivant à notre newsletter dans notre <a href="#" onclick="togglemenu();">menu</a>.
+
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                        <div class="col-md-6">
+                             <div class=" col-md-12" >
+                             <div class="panel panel-default">
+
+                                    <div class="panel-heading" data-toggle="collapse" data-target="#qu3" onClick="test('qu3');">
+                                    <h3 class="panel-title"><span id="plus3">+</span>&nbsp;&nbsp;&nbsp; Combien coûte un menu ? </h3>
+                                    </div>
+
+                                <div class="panel-body collapse" id="qu3">
+                                    Chaque événement est différent, le prix s’adapte donc à son chef, son thème et ses produits. Il est indiqué sur la page de l’événement lors de l’inscription.
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                        <div class="col-md-6">
+                            <div class=" col-md-12" >
+                            <div class="panel panel-default">
+
+                                    <div class="panel-heading" data-toggle="collapse" data-target="#qu7" onClick="test('qu7');">
+                                    <h3 class="panel-title"><span id="plus7">+</span>&nbsp;&nbsp;&nbsp; Est-il obligatoire de réserver ma place ?
+ </h3>
+                                    </div>
+
+                                <div class="panel-body collapse" id="qu7">
+                                    Oui, la participation à nos événements se fait uniquement sur réservation. Les places étant limitées nous vous conseillons de réserver rapidement.
+                                </div>
+                            </div>
+                            </div>
+
+
+                       </div>
+                        <div class="col-md-6">
+                    <div class=" col-md-12" >
+                             <div class="panel panel-default">
+
+                                    <div class="panel-heading" data-toggle="collapse" data-target="#qu4" onClick="test('qu4');">
+                                    <h3 class="panel-title"><span id="plus4">+</span>&nbsp;&nbsp;&nbsp; Est-il possible de participer à vos soirées si j’ai des allergies ?
+</h3>
+                                    </div>
+
+                                <div class="panel-body collapse" id="qu4">
+                                   Les menus de nos événements sont uniques, nous vous conseillons de nous faire part de vos allergies ou intolérances via notre formulaire de contact avant de faire votre réservation.
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                        <div class="col-md-6">
+                             <div class=" col-md-12" >
+                                 <div class="panel panel-default">
+
+                                    <div class="panel-heading" data-toggle="collapse" data-target="#qu5" onClick="test('qu5');">
+                                    <h3 class="panel-title"><span id="plus5">+</span>&nbsp;&nbsp;&nbsp;Est-il possible de payer par carte ?
+</h3>
+                                    </div>
+
+                                <div class="panel-body collapse" id="qu5">
+                                    Le paiement de nos événements se fait uniquement en espèces.
+
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                        <div class="col-md-6">
+                             <div class=" col-md-12" >
+                                 <div class="panel panel-default">
+
+                                    <div class="panel-heading" data-toggle="collapse" data-target="#qu6" onClick="test('qu6');">
+                                    <h3 class="panel-title"><span id="plus6">+</span>&nbsp;&nbsp;&nbsp; L’accès aux événements est-il accessible aux personnes à mobilité réduite ?
+</h3>
+                                    </div>
+
+                                <div class="panel-body collapse" id="qu6">
+                                    Chaque événement ayant lieu dans des endroits différents, nous ne pouvons garantir cet accès. Il est donc conseillé de se renseigner avant l’événement auquel vous souhaitez participer avant de vous inscrire.
+
+                                </div>
+                            </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+    </div>
+    <div class="col-md-12">
+             <p>Pour en savoir plus sur nos partenaires : cliquez sur <a href="./partner.html">ce lien</a> </p>
+
+    </div>
+
+    <script>
+    document.getElementById("containerLeft").style.background = '{{ background_url }}';
+    document.getElementById("containerLeft").style.backgroundRepeat = "no-repeat";
+    document.getElementById("containerLeft").style.backgroundSize = "cover";
+    document.getElementById("containerLeft").style.backgroundPosition = "center center";
+    </script>
+{% endblock %}

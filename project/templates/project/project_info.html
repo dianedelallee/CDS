@@ -1,0 +1,44 @@
+{% extends 'website/base.html' %}
+
+{% block page_title %}
+    Coup d'un soir - Actu
+{% endblock %}
+
+{% load staticfiles %}
+
+{% block containerRight %}
+        <div class="row">
+
+                    <div class="project col-md-12" >
+                        <div class="col-md-12" >
+                        <h1  id="titleProjectHeader"></h1>
+                            <h3>{{ project.name }}
+                                <br><br>
+                                {{ project.place }}<br>
+                            {{ project.date }}
+                                 <br><br>
+                            {{ project.chief }}</h3>
+
+
+
+                            <p id="textProject"> {{ project.text }}</p>
+                    </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                     <div class="photoDispo col-md-12" id="photoDispo">
+
+
+                                    </div>
+                </div>
+
+
+    <script>
+    document.getElementById("containerLeft").style.background = '{{ background_url }}';
+    document.getElementById("containerLeft").style.backgroundRepeat = "no-repeat";
+    document.getElementById("containerLeft").style.backgroundSize = "cover";
+    document.getElementById("containerLeft").style.backgroundPosition = "center center";
+    </script>
+{% endblock %}

@@ -10,3 +10,5 @@ class Project(models.Model):
     big_image_path = models.CharField(max_length=200)
     small_image_path = models.CharField(max_length=200)
     text = models.TextField()
+    credit_video = models.CharField(max_length=100)
+    video_path = models.CharField(max_length=100)

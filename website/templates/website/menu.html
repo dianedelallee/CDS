@@ -1,0 +1,67 @@
+{% load staticfiles %}
+
+<a href="#menu-toggle2" class="menuClose" id="menu-toggle2" onClick="hambMenu(true);">&#x2715;</a>
+
+<ul class="sidebar-nav">
+    <li class="sidebar-brand">
+        <a href="{% url 'website_home' %}">
+            <img src='{% static "img/cds_logo.png" %}' />
+        </a>
+    </li>
+
+    <li>
+        <a href="{% url 'website_presentation' %}" >
+            plus sur coup d’un soir
+        </a>
+    </li>
+
+    <li>
+        <a href="{% url 'website_past_events' %}" >
+            événements passés
+        </a>
+    </li>
+
+    <li>
+        <a href="{% url 'website_reservation' %}" >
+            prochain événement
+        </a>
+    </li>
+
+    <li>
+        <a href="{% url 'website_faq' %}" >
+            f.a.q.
+        </a>
+    </li>
+
+    <li>
+        <a href="{% url 'website_contact' %}" >
+            contact
+        </a>
+    </li>
+</ul>
+
+<div class="container">
+    <div class="form_newsletter">
+        <form method="post" action="home.php">
+            <label>
+                newsletter
+            </label>
+            <input type="text" name="email" id="email" placeholder="adresse@mail.ch"/>
+            <input type="submit" value="recevoir la newsletter"></form>
+    </div>
+</div>
+
+<div id="socialMedia" class="socialMedia">
+    <a href="https://www.facebook.com/coupdunsoirlausanne" target="_blank">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+    <a href="https://www.instagram.com/coupdunsoir/" target="_blank">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</div>
