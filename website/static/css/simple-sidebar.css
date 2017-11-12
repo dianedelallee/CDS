@@ -61,7 +61,7 @@ a:hover{
 
 .projectLeft{
     background: white;
-    
+
 }
 
 
@@ -86,7 +86,7 @@ a:hover{
     z-index:100;
     color : white;
     background:rgba(0,0,0,0.75);
-    
+
 }
 
 .modal-footer{
@@ -112,7 +112,7 @@ a:hover{
     position:absolute;
     overflow :scroll;
     z-index:30;
-    
+
 }
 .menuClose{
     color:black;
@@ -134,11 +134,11 @@ a:hover{
 .form_newsletter{
     position: relative;
     margin-top: 70vh;
-    
+
 }
 .form_newsletter input{
-    
-    
+
+
 }
 #email{
     width: 220px;
@@ -195,7 +195,7 @@ a:hover{
 }
 
 .sidebar-brand img{
-    
+
     width:80%;
 }
 
@@ -206,7 +206,7 @@ a:hover{
     max-width: 250px;
     height: 100vh;
     overflow: hidden;
-    
+
     margin-left: -250px;
     overflow-y: auto;
     background: #ffffff;
@@ -227,7 +227,7 @@ a:hover{
     z-index: 30;
     bottom : 60px;
     margin-left : 15px;
-} 
+}
 
 .socialMedia a{
     text-decoration: none;
@@ -313,7 +313,7 @@ a:hover{
     line-height: 50px;
     position:relative;
     z-index :32;
-    
+
 }
 .title p{
     display: inline;
@@ -325,7 +325,7 @@ a:hover{
     text-decoration: none;
     font-size : 0.4em;
     font-style : normal;
-    
+
 }
 /* ======== effet sur l'image de l'index ========= */
 .headline {
@@ -337,7 +337,7 @@ a:hover{
     font-size: 2.5em;
     text-align : right;
     color : white;
-    
+
 }
 .hidden {
   opacity:0;
@@ -359,7 +359,7 @@ a:hover{
     font-size: 0.7em;
     text-align:left;
      color : white;
-    
+
 }
 
 /* =========================== */
@@ -400,9 +400,9 @@ a:hover{
     max-height: 100vh;
     overflow:scroll;
 
-   
-    
-    
+
+
+
 }
 /* ======== Article ========= */
 
@@ -416,22 +416,22 @@ a:hover{
     position : relative;
     margin-top:2vh;
     text-align: justify;
-    
+
 }
 
 .art img{
     width:100%;
-    
+
 }
 .art h3{
-    
+
     font-size : 1em;
     color:black;
-    
+
 }
 
 .art p{
-    
+
     color:gray;
     font-size: 0.9em;
     font-weight: 200;
@@ -489,7 +489,7 @@ video.fillWidth {
 .posfull{
     color : black;
     font-size:2.5em;
-    
+
 }
 
 .positionFullScreen{
@@ -504,7 +504,7 @@ video.fillWidth {
 /* ========= Formulaires ========== */
 /* ================================ */
 .form{
-margin-top: 50px;    
+margin-top: 50px;
 }
 
 .req {
@@ -516,18 +516,18 @@ margin-top: 50px;
 
 
 label {
-  
+
   transition:all 0.25s ease;
   -webkit-backface-visibility: hidden;
   pointer-events: none;
   font-size:1em;
-  
+
 }
 label.active {
   transform:translateY(50px);
   left:2px;
   font-size:1.1em;
- 
+
 }
 label.highlight {
 	color:white;
@@ -549,8 +549,8 @@ input[type="text"], input[type="email"], textarea {
 
 input[type="radio"]{
     display: inline-block;
-   
-    
+
+
 }
 
 input:focus {
@@ -575,7 +575,7 @@ textarea {
  color : white;
     background: grey;
   -webkit-appearance: none;
-  
+
 }
 
 .button:hover {
@@ -585,8 +585,8 @@ textarea {
      transition:all 0.2s ease;
     transform: translateY(2px);
     box-shadow: none;
-    
-    
+
+
 }
 
 .reservation_article{
@@ -626,6 +626,22 @@ textarea {
 .partner ul{
     list-style-type: none;
 }
+
+.video_potaufeu{
+    position: absolute;
+    z-index: 0;
+    background-size: 100% 100%;
+    top: 0px;
+    left: 0px;
+}
+.video_potaufeu video{
+    padding-top:20vh;
+    background-size: cover;
+}
+
+.form {
+    margin-bottom:2vh;
+}
 /* ================================ */
 /* ======== Media Queries ========= */
 /* ================================ */
@@ -637,7 +653,7 @@ textarea {
 
     #wrapper.toggled {
         padding-left: 250px;
-  
+
     }
 
     #sidebar-wrapper {
@@ -656,8 +672,8 @@ textarea {
         position: relative;
         margin-right: 0;
     }
-  
-    
+
+
 
 
  @media screen and (max-width: 990px) {

@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% load staticfiles %}
+{% load mathfilters %}
 
 {% block containerRight %}
         <div class="row">
@@ -22,7 +23,27 @@
 
 
                             <p id="textProject"> {{ project.text }}</p>
-                    </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <iframe class="col-md-12" height="{% if 'Brut' in project.name %} 260{% else %} 360 {% endif %}"
+                                    src="https://player.vimeo.com/video/{{ project.video_path }}?color=ffffff"
+                                    frameborder="0"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+
+                            </iframe>
+                            <p>
+
+                                <a href="https://vimeo.com/{{ project.video_path }}">
+                                    {{ project.name }} - {{ project.chief }}
+                                </a> réalisé par
+
+                                    {{ project.credit_video }}
+
+                            </p>
+                        </div>
+
+
                     </div>
 
                 </div>
@@ -30,9 +51,30 @@
 
                      <div class="photoDispo col-md-12" id="photoDispo">
 
+                         {% for photo_array in photo_small %}
+                             <div class="col-md-3 col-sm-6 col-lg-3 col-xs-6">
+                                {% for  photo in photo_array%}
+                                    <div class="row">
 
+                                    {% with indic=forloop.parentloop.counter|mul:num_img|add:forloop.counter %}
+                                    <div class="col-lg-12"  data-toggle="modal"
+                                         data-target="#myModal" data-local="#myCarousel"
+
+                                         onclick="active_car(this, '{{indic}}');">
+                                    {% endwith %}
+                                        <img class="img-thumbnail"
+                                             src="{% static 'img/'|add:photo %}">
                                     </div>
+                                    </div>
+                                {% endfor %}
+                             </div>
+
+
+                         {% endfor %}
+                     </div>
                 </div>
+
+
 
 
     <script>
@@ -41,4 +83,45 @@
     document.getElementById("containerLeft").style.backgroundSize = "cover";
     document.getElementById("containerLeft").style.backgroundPosition = "center center";
     </script>
+
+
+    <div class="modal fade modal-fullscreen force-fullscreen" id="myModal" tabindex="-1"
+         role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <div id="myCarousel" class="carousel slide carousel-fit" data-ride="carousel">
+  <!-- Indicators -->
+
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" id="caroussel_value">
+        {% for photo_array in photo_small %}
+            {% for  photo in photo_array%}
+                {% with indic=forloop.parentloop.counter|mul:num_img|add:forloop.counter %}
+                <div class="active item" id="element{{indic}}">
+                    <img src="{% static 'img/'|add:photo %}" alt="image de l evenement">
+                </div>
+                {% endwith %}
+            {% endfor %}
+        {% endfor %}
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 {% endblock %}
