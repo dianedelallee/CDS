@@ -4,4 +4,4 @@ register = template.Library()
 
 @register.filter
 def replace_name(value):
-    return value.replace(" ","")
+    return value.replace(" ","_")

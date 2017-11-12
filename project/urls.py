@@ -18,6 +18,5 @@ from . import views
 
 
 urlpatterns = [
-    url(r'^$', views.project_summary, name="project_summary"),
     url(r'^(?P<event_name>[\w_]+)$', views.project_info, name="project_info"),
 ]
