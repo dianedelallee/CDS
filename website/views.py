@@ -43,8 +43,9 @@ def website_presentation(request):
     num = randint(0, 4)
     url = "url(/static/img/presentation/" + repertory[num] + ")"
 
-    member_even = Member.objects.annotate(odd=F('id') % 2).filter(odd=False)
-    member_odd = Member.objects.annotate(odd=F('id') % 2).filter(odd=True)
+    members = Member.objects.all().order_by('last_name').reverse()
+    member_even = members.annotate(odd=F('id') % 2).filter(odd=False)
+    member_odd = members.annotate(odd=F('id') % 2).filter(odd=True)
 
     return render(request, "website/presentation.html", {
         "background_url": url,
@@ -54,7 +55,10 @@ def website_presentation(request):
 
 
 def website_partner(request):
-    return render(request, "website/presentation.html", {})
+    url = "url(/static/img/partenaires.jpg)"
+    return render(request, "website/partner.html", {
+        "background_url": url,
+    })
 
 
 def website_faq(request):

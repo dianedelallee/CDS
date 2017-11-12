@@ -1,1 +1,98 @@
 {% extends 'website/base.html' %}
+
+
+
+{% block containerRight %}
+
+    <div class="presArticle col-md-12" >
+    <h3>partenaires</h3>
+    <p>voici nos merveilleux partenaires sans qui rien ne serait possible</p>
+</div>
+    <div class="row">
+        <div class="col-md-6" id="articleLeft">
+       <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12 partner">
+                    <h4>produits frais</h4>
+                    <ul>
+                        <li>Culture de champignons Stadler</li>
+                        <li>Domaine de la Bluette</li>
+                        <li>Domaine des Saugealles</li>
+                        <li>Ferme Jaggi</li>
+                        <li>La Biergerie</li>
+                        <li>La Brouette</li>
+                        <li>La ferme du Taulard</li>
+                        <li>La Houblonnière maraîchère</li>
+                        <li>Le Sapalet</li>
+                        <li>Liqueurs Mellioret</li>
+                        <li>Marché Cuendet</li>
+                    </ul>
+
+
+                     <h4>décoration</h4>
+                    <ul>
+                    <li>Menuiserie Stoudmann</li>
+                    <li>Mireille Pillionnel</li>
+                    <li>Muller Toitures</li>
+                    </ul>
+
+                    <h4>vidéo</h4>
+                    <ul>
+                    <li>Messieurs.ch</li>
+                    <li>Roméo Bernal</li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+
+                        </div>
+        </div>
+        <div class="col-md-6" id="articleRight">
+       <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12 partner">
+                    <h4>boissons sympathiques</h4>
+                    <ul>
+                        <li>Alfavin</li>
+                        <li>Brasserie du lance-Pierre</li>
+                        <li>Cidrerie le Vulcain</li>
+                        <li>Domaine de Penloup</li>
+                        <li>Domaine de la Bluette</li>
+                        <li>Domaine des Charmes</li>
+                        <li>Desjardins Freres</li>
+                        <li>Domaine Mermetus</li>
+                        <li>Office des vins vaudois</li>
+                    </ul>
+
+                    <h4>logistique</h4>
+                    <ul>
+                        <li>Conte-Goûts</li>
+                        <li>Paris Zurich</li>
+                    </ul>
+
+                    <h4>lieux</h4>
+                    <ul>
+                    <li>Brasserie du Cygne</li>
+                    <li>Espace Saint-Martin</li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+       </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById("containerLeft").style.background = '{{ background_url }}';
+        document.getElementById("containerLeft").style.backgroundRepeat = "no-repeat";
+        document.getElementById("containerLeft").style.backgroundSize = "cover";
+        document.getElementById("containerLeft").style.backgroundPosition = "center center";
+    </script>
+{% endblock %}
