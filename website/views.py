@@ -5,6 +5,7 @@ from django.shortcuts import render
 
 from project.models import Project
 from website.models import Member
+from website.forms import ContactForm
 
 
 def website_index(request):
@@ -30,7 +31,13 @@ def website_home(request):
 
 
 def website_contact(request):
-    return render(request, "website/contact.html", {})
+    url = "url(/static/img/contact_low.jpg)"
+    form = ContactForm()
+
+    return render(request, "website/contact.html", {
+        "background_url": url,
+        "form": form
+    })
 
 
 def website_credit(request):
@@ -43,8 +50,9 @@ def website_presentation(request):
     num = randint(0, 4)
     url = "url(/static/img/presentation/" + repertory[num] + ")"
 
-    member_even = Member.objects.annotate(odd=F('id') % 2).filter(odd=False)
-    member_odd = Member.objects.annotate(odd=F('id') % 2).filter(odd=True)
+    members = Member.objects.all().order_by('last_name').reverse()
+    member_even = members.annotate(odd=F('id') % 2).filter(odd=False)
+    member_odd = members.annotate(odd=F('id') % 2).filter(odd=True)
 
     return render(request, "website/presentation.html", {
         "background_url": url,
@@ -54,7 +62,10 @@ def website_presentation(request):
 
 
 def website_partner(request):
-    return render(request, "website/presentation.html", {})
+    url = "url(/static/img/partenaires.jpg)"
+    return render(request, "website/partner.html", {
+        "background_url": url,
+    })
 
 
 def website_faq(request):
@@ -65,7 +76,7 @@ def website_faq(request):
 
 
 def website_past_events(request):
-    url = "url(/static/img/BrutSens/brut_9.jpg)"
+    url = "url(/static/img/BrutdeSens/brut_9.jpg)"
 
     projects_odd = Project.objects.annotate(odd=F('id') % 2).filter(odd=False)
     projects_even = Project.objects.annotate(odd=F('id') % 2).filter(odd=True)
@@ -78,4 +89,5 @@ def website_past_events(request):
 
 
 def website_reservation(request):
-    return render(request, "website/reservation.html", {})
+    return render(request, "website/reservation.html", {
+    })

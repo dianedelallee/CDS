@@ -1,1 +1,34 @@
 {% extends 'website/base.html' %}
+
+{% load staticfiles %}
+
+{% block containerLeft %}
+
+    <div class="video_potaufeu">
+                    <video  autoplay no-controls loop>
+                        <source src="{% static 'video/pot-au-feu.mp4' %}"
+                                type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+{% endblock %}
+
+
+{% block containerRight %}
+
+        <div class="presArticle col-md-12 resa" id="presArticle">
+            <h3>L'aventure continue. Ça mijote, ça sent bon, on vous garde la surprise encore un
+                peu au chaud.
+            </h3>
+            <p>
+                <br><br> Inscrivez-vous à notre newsletter pour ne manquer aucune information.
+            </p>
+        </div>
+
+
+
+    <script>
+    document.getElementById("containerLeft").style.background = '#000000';
+
+    </script>
+{% endblock %}

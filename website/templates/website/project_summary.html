@@ -1,12 +1,17 @@
 {% load staticfiles %}
+{% load replace_name %}
 
-<h3>
-<img src='{% static "img/"|add:pro.big_image_path %}' alt="img_for_{{ pro.name }}"/>
-<br><br>
-   {{ pro.name }}
-<br><br>
-{{ pro.place }}<br>
-{{ pro.date }}
-<br><br>
-{{ pro.chief }}</h3>
-{{ pro.description }}
+<a href="{{ '/evenement/'|add:pro.name|replace_name }}">
+    <h3>
+        <img src='{% static "img/"|add:pro.big_image_path %}' alt="img_for_{{ pro.name }}"/>
+        <br><br>
+        {{ pro.name }}
+        <br><br>
+        {{ pro.place }}<br>
+        {{ pro.date }}
+        <br><br>
+        {{ pro.chief }}
+    </h3>
+
+    {{ pro.description }}
+</a>

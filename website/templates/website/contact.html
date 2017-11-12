@@ -1,1 +1,62 @@
 {% extends 'website/base.html' %}
+
+{% block containerRight %}
+
+    <div class="presArticle col-md-12" >
+    <h3>
+        contact
+    </h3>
+    <p>
+        envoyez-nous un message via le formulaire ci-dessous ou écrivez-nous simplement
+        à oui@coup-dun-soir.ch
+
+    </p>
+    </div>
+
+    <div class="row">
+                    <div class="col-md-12" style="margin-bottom:4vh;">
+                        <div id="form" class="form">
+                             <form  method="post" >
+
+                                 <div class=" col-md-6">
+             {{ form.last_name.label }}
+             {{ form.last_name }}
+            </div>
+
+                                 <div class=" col-md-6">
+             {{ form.first_name.label }}
+             {{ form.first_name }}
+            </div>
+
+          <div class=" col-md-12">
+              {{ form.email.label }}
+              {{ form.email }}
+          </div>
+
+            <div class=" col-md-12">
+                {{ form.subject.label }}
+              {{ form.subject }}
+
+          </div>
+            <div class="col-md-12">
+                {{ form.message.label }}
+              {{ form.message }}
+          </div>
+
+            <div class="col-md-4  col-xs-4">
+            <input type="submit" id="submitButton" class="btn-default" value="envoyer"/>
+            </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+    </div>
+
+    <script>
+    document.getElementById("containerLeft").style.background = '{{ background_url }}';
+    document.getElementById("containerLeft").style.backgroundRepeat = "no-repeat";
+    document.getElementById("containerLeft").style.backgroundSize = "cover";
+    document.getElementById("containerLeft").style.backgroundPosition = "center center";
+    </script>
+{% endblock %}
