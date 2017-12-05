@@ -17,7 +17,7 @@
                     <div class="col-md-12" style="margin-bottom:4vh;">
                         <div id="form" class="form">
                              <form  method="post" >
-
+{% csrf_token %}
                                  <div class=" col-md-6">
              {{ form.last_name.label }}
              {{ form.last_name }}

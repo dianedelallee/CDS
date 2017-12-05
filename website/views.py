@@ -32,6 +32,20 @@ def website_home(request):
 
 def website_contact(request):
     url = "url(/static/img/contact_low.jpg)"
+
+    if request.method == "POST":
+        last_name  = request.POST.get('last_name')
+        first_name  = request.POST.get('first_name')
+        email  = request.POST.get('email')
+        subject  = request.POST.get('subject')
+        message  = request.POST.get('message')
+        print(message)
+        print(subject)
+        print(email)
+        print(first_name)
+        print(last_name)
+
+
     form = ContactForm()
 
     return render(request, "website/contact.html", {
