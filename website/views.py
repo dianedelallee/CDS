@@ -82,7 +82,7 @@ def website_partner(request):
 
 
 def website_faq(request):
-    url = "url(/static/img/accueil/chair_4_rec.jpg)"
+    url = "url(/static/img/accueil/printemps_2.jpg)"
     return render(request, "website/faq.html", {
         "background_url": url,
     })

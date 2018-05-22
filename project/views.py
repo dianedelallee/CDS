@@ -1,5 +1,4 @@
 import glob
-
 from django.shortcuts import render
 
 from project.models import Project
@@ -16,7 +15,7 @@ def project_info(request, event_name):
     url = "url(/static/img/" + project.big_image_path + ")"
 
     photos_caroussel = []
-    fichiers = glob.glob( "./website/static/img/"+project.small_image_path+"/small/*")
+    fichiers = glob.glob( "*/static/img/"+project.small_image_path+"/small/*")
     for fic in fichiers:
         photos_caroussel.append( event_name.replace("_", "") + "/small/" + fic.split("/")[-1])
 
