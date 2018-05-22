@@ -4,8 +4,6 @@ from django.shortcuts import render
 
 from project.models import Project
 
-<<<<<<< HEAD
-=======
 def split_list(alist, wanted_parts=1):
     length = len(alist)
     return [ alist[i*length // wanted_parts: (i+1)*length // wanted_parts]
@@ -13,7 +11,6 @@ def split_list(alist, wanted_parts=1):
 
 
 
->>>>>>> development
 def project_info(request, event_name):
     project = Project.objects.get(name=event_name.replace("_", " "))
     url = "url(/static/img/" + project.big_image_path + ")"
