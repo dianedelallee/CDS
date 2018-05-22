@@ -7,7 +7,6 @@ from project.models import Project
 from website.models import Member
 from website.forms import ContactForm
 
-
 def website_index(request):
     return render(request, "website/index.html", {})
 
@@ -105,3 +104,8 @@ def website_past_events(request):
 def website_reservation(request):
     return render(request, "website/reservation.html", {
     })
+
+
+def handler404(request):
+    print("here")
+    return render(request, '404.html', status=404)
