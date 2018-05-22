@@ -12,8 +12,8 @@ def website_index(request):
 
 
 def website_home(request):
-    repertory = ["chair_1_rec.jpg", "chair_2_rec.jpg", "chair_3_rec.jpg", "chair_4_rec.jpg",
-                  "chair_5_rec.jpg", "chair_6_rec.jpg", "chair_7_rec.jpg"]
+    repertory = ["printemps_1.jpg", "printemps_2.jpg", "printemps_3.jpg", "printemps_4.jpg",
+                  "printemps_5.jpg", "printemps_6.jpg", "printemps_7.jpg"]
     num = randint(0, 6)
     url = "url(/static/img/accueil/" + repertory[num] + ")"
 
