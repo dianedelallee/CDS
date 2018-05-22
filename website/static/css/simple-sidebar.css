@@ -6,6 +6,7 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 100;
     hyphens: auto;
+    background-color: transparent;
 }
 h3{
     font-family: 'Roboto Condensed', sans-serif;
@@ -37,6 +38,7 @@ a:hover{
 }
 
 
+
 /* ========================== */
 /* ======== Project ========= */
 /* ========================== */
@@ -60,7 +62,7 @@ a:hover{
 }
 
 .projectLeft{
-    background: white;
+    background-color: transparent;
 
 }
 
@@ -107,14 +109,16 @@ a:hover{
 .myMenu{
     color:white;
     font-size : 2.5em;
+
 }
 .positionMenu{
     position:absolute;
-    overflow :scroll;
     z-index:30;
+    background-color: transparent;
 
 }
 .menuClose{
+    background-color: transparent;
     color:black;
     font-size : 1.2em;
     position : absolute;
@@ -122,6 +126,7 @@ a:hover{
     margin-top: 2vh;
 }
 .menuClose span{
+    background-color: transparent;
     color : white;
     border:none;
 }
@@ -136,13 +141,9 @@ a:hover{
     margin-top: 70vh;
 
 }
-.form_newsletter input{
 
 
-}
-#email{
-    width: 220px;
-}
+
 
 /* =========================== */
 /* ======== SideBar ========== */
@@ -191,7 +192,7 @@ a:hover{
 
 .sidebar-nav > .sidebar-brand a:hover {
     color: #fff;
-    background: none;
+    background: transparent;
 }
 
 .sidebar-brand img{
@@ -284,8 +285,7 @@ a:hover{
 
 .containerLeft{
     position: relative;
-
-
+    background-color: transparent;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -560,10 +560,6 @@ input:focus {
 textarea {
     height:300px;
 }
-
-
-
-
 
 .button {
   border:1px solid grey;

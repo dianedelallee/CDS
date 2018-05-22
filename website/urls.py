@@ -14,3 +14,5 @@ urlpatterns = [
     url(r'^evenementspasses', views.website_past_events, name="website_past_events"),
     url(r'^reservation', views.website_reservation, name="website_reservation"),
 ]
+
+handler404 = views.handler404

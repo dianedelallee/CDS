@@ -40,16 +40,11 @@
     </li>
 </ul>
 
-<div class="container">
+
     <div class="form_newsletter">
-        <form method="post" action="home.php">
-            <label>
-                newsletter
-            </label>
-            <input type="text" name="email" id="email" placeholder="adresse@mail.ch"/>
-            <input type="submit" value="recevoir la newsletter"></form>
+        {% include 'website/mailchimp.html' %}
     </div>
-</div>
+
 
 <div id="socialMedia" class="socialMedia">
     <a href="https://www.facebook.com/coupdunsoirlausanne" target="_blank">
